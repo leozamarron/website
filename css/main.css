@@ -1,0 +1,959 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fcb5;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fcb5;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+  box-sizing: border-box;
+}
+*,*:before,*:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+/** Globales **/
+.oscuro{
+    background-color: #1f1f1f;
+    color: #fff;
+}
+.oscuro p{
+    color: #fff;
+}
+.oscuro h2{
+  color: #fff;
+}
+.oscuro button.carousel-anterior,
+.oscuro button.carousel-siguiente {
+  color: #fff;
+}
+.oscuro .carousel-indicadores .glider-dot{
+  background: #fff;
+}
+.oscuro .slider__btn {
+  color: #000;
+}
+.wap {
+  width: 90%;
+  margin: auto;
+}
+.nosotros {
+  margin-top: 50px;
+  text-align: center;
+}
+.contenedor-columnas {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.columnasx3 {
+  width: 100%;
+  float: left;
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+.columnasx3 img {
+  width: 100%;
+}
+@media only screen and (min-width:480px) {
+  .columnasx3 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width:768px) {
+  .columnasx3 {
+    width: 33.333%;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .columnasx3 {
+    width: 33.333%;
+  }
+}
+.contenedor {
+  width: 98%;
+  margin:0 auto;
+}
+@media only screen and (min-width:480px) {
+  .contenedor {
+    width: 95%;
+  }
+}
+@media only screen and (min-width:769px) {
+  .contenedor {
+    width: 90%;
+  }
+}
+@media only screen and (min-width:992px) {
+  .contenedor {
+    width: 90%;
+    max-width: 1100px;
+  }
+}
+.seccion {
+  padding: 30px 0;
+}
+.seccion p {
+  font-size: 1.1em;
+  text-align: center;
+  color: #000;
+}
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+}
+h2::after {
+  content: '';
+  margin: auto auto;
+  background-image: url(../img/separador.svg);
+  height: 30px;
+  width: 100px;
+  display: block;
+}
+h3 {
+  font-size: 1.8em;
+  color: #fe4918;
+  font-family: 'PT Sans', sans-serif;
+  margin: 0;
+}
+h4 {
+  margin-top: 17px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+h5{
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  padding: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+p {
+  color: #000;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  -webkit-text-stroke: thin;
+}
+.btn {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  border: 3px double #393939;
+}
+.btn:hover {
+  background-color: #2b2b2b;
+}
+.button {
+  background-color: #fe4918;
+  padding: 10px 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+   font-family: 'Oswald', sans-serif;
+   text-decoration: none;
+   font-size: 1em;
+   margin-top: 20px;
+   display: inline-block;
+   transition: all .3s ease;
+   border: 2px solid #fe4918;
+}
+.button.hollow,
+.button.hollow:hover {
+  background-color: white;
+  color: #fe4918;
+}
+.button.transparente {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+.button.transparente:hover {
+  border: 2px solid #fe4918;
+}
+
+ul {
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+.button:hover {
+  background-color: #e33000;
+  color: #fff;
+}
+.float-right {
+  float: right;
+}
+/** Lettering**/
+h1.nombre-sitio span {
+  position: relative;
+  text-shadow: 0 0 30px black;
+}
+
+@media only screen and (min-width: 992px){
+  .char1 {
+        top: 20px; right:20px;
+  }
+  .char2 {
+        top:0px; left:-20px;
+  }
+  .char3 {
+    top:10px; right:20px;
+  }
+  .char4 {
+    top:5px; right:10px;
+  }
+  .char5 {
+    top:15px; right:10px;
+  }
+  .char6 {
+    top:5px; left:10px;
+  }
+  .char7 {
+    top:20px; left:-10px;
+  }
+  .char8 {
+    top:0; left: 10px;
+  }
+  .char9 {
+    top:10px;    right: 20px;
+  }
+  .char10 {
+      top: 20px; right: 20px;
+  }
+
+}
+
+/** ----------------------------------------Header------------------------------------------------ **/
+/** Barra **/
+div.barra {
+  background-color: #353535;
+  padding: 0 0 12px;
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+div.logo{
+  width: 65%;
+  float: left;
+}
+div.logo img {
+  width: 100%;
+
+}
+.barra {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+}
+@media only screen and (min-width:768px) {
+  div.logo {
+    width:18%;
+  }
+}
+/** ---------------------------------Navegacion principal--------------------------------- **/
+
+nav.navegacion-principal ul{
+  display: flex;
+  float: right;
+  padding-top: 18px;
+}
+nav.navegacion-principal ul li {
+  float: right;
+  list-style: none;
+  position: relative;
+}
+nav.navegacion-principal ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #585858cc;
+  padding-top: 0;
+}
+nav.navegacion-principal ul li:hover ul {
+  display: block;
+}
+nav.navegacion-principal ul li ul li a {
+  padding: .5rem 8rem;
+  padding-left: 5px;
+  text-align: left;
+  text-transform: capitalize;
+  line-height: unset;
+  white-space: nowrap;
+  border: 1.4px solid #333333c9;
+  width: 100%;
+  border-radius: 0;
+}
+nav.navegacion-principal {
+  display: none;
+  width: 100%;
+}
+nav.navegacion-principal a {
+   font-family: 'Oswald', sans-serif;
+   color: #ffffff;
+   border-radius: 10px;
+   font-size: 1em;
+   text-transform: uppercase;
+   text-decoration: none;
+   transition: all .6s ease;
+   width: 100%;
+   display: block;
+   text-align: center;
+   margin-bottom: 20px;
+   clear: both;
+ }
+nav.navegacion-principal a:hover {
+  background-color: #fe4918;
+}
+nav.navegacion-principal ul li:last-child a {
+  border: 2px solid #fe4918;
+  color: #fe4918;
+  margin-top: -2px;
+}
+nav.navegacion-principal ul li:last-child:hover a {
+  color: #ffffff;
+}
+nav.navegacion-principal ul li ul li:last-child a {
+  border: 1.4px solid #333333c9;
+  color: #fff;
+  margin-top: inherit;
+}
+@media only screen and (min-width:768px) {
+  nav.navegacion-principal {
+    width: 80%;
+    float: right;
+    text-align: right;
+    display: contents;
+  }
+  nav.navegacion-principal a {
+    padding: 13px;
+    display: inline-block;
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    margin:0 10px 0 0;
+  }
+}
+/* menu movil */
+div.menu-movil {
+    width: 60px;
+    display: block;
+    float: right;
+    text-align: right;
+    margin-top: 12px;
+}
+
+div.menu-movil:hover {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    div.menu-movil {
+        display: none;
+    }
+}
+
+div.menu-movil span{
+    height: 8px;
+    margin-bottom: 6px;
+    background-color: white;
+    display: block;
+}
+/* ----------seccion contenedor------ */
+.container-slider {
+  width: auto;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  margin-top: 60px;
+}
+.slider {
+  display: flex;
+  width: 300%;
+  height: 28rem;
+  margin-left: -100%;
+}
+.slider__section {
+  width: 100%;
+  display: block;
+}
+.slider__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider__btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26px;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider__btn:hover {
+  background: #fff;
+}
+.slider__btn--left {
+  left: 10px;
+}
+.slider__btn--right {
+  right: 10px;
+}
+/* --------------------------no1-------------------- */
+div.no1 {
+  text-align: center;
+}
+div.no1 p {
+  margin: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+
+
+/* --------------------WAP----------------------- */
+div.columnasx3 img{
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all .5s ease-in-out;
+}
+div.columnasx3 img:hover{
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+}
+div.columnasx3 h5 {
+  -webkit-text-stroke: thin;
+}
+div.columnasx3 p {
+  -webkit-text-stroke: thin;
+}
+section.nosotros h2 {
+  padding-top: 30px;
+}
+/* -----------------CAROUSEL-------------------- */
+h2.marcas{
+  text-align: center;
+  margin-top: 100px;
+}
+div.carousel-elemento img {
+  width: 150px;
+  height: 70px;
+  padding: 10px;
+  -webkit-transition: all .4s ease-in-out;
+}
+div.carousel-elemento img:hover{
+  background: rgba(0,0,0,.01);
+  -webkit-transform: scale(1.1);
+}
+.carousel-contenedor{
+  position: relative;
+}
+
+.carousel-anterior,
+.carousel-siguiente {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  top: calc(50% - 14px);
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background: none;
+  color: #000;
+  opacity: 20%;
+}
+.carousel-anterior:hover,
+.carousel-siguiente:hover {
+  opacity: 100%;
+}
+.carousel-anterior{
+  left: 6%;
+}
+.carousel-siguiente{
+  right: 6%;
+}
+.carousel-lista {
+  width: 78%;
+  overflow: hidden;
+  height: 80%;
+  line-height: 75px;
+  position: relative;
+  padding: 10 15;
+  text-align: center;
+}
+.carousel-indicadores .glider-dot{
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #000;
+  opacity: .2;
+  border-radius: 0;
+}
+.carousel-indicadores .glider-dot:hover{
+  opacity: .5;
+}
+.carousel-indicadores .glider-dot.active{
+  opacity: 1;
+}
+/* ----------------------CONTACTO INDEX------------------------ */
+.parallax::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+div.index-contacto {
+  position: relative;
+  height: auto;
+}
+div.index-contacto::before {
+  background-image: url(../img/computer-2557299_1920.jpg);
+  content: '';
+}
+div.index-contacto .contenido {
+  margin-top: 100px;
+  padding: 120px 0;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+div.index-contacto .contenido p{
+  font-size: 1.2em;
+  text-transform: lowercase;
+}
+div.index-contacto .contenido h3{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 6vw;
+  font-family: 'PT Sans', sans-serif;
+}
+/* -------------------------SUBHEADER-------------------------- */
+div.subheader {
+  background-image: url(../img/prueba.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 12rem;
+  width: 100%;
+  margin-bottom: 50px;
+  display: block
+}
+h2.subheader-nombre {
+  font-size: 2.6rem;
+}
+/* ---------------------------CONTACTO----------------------------- */
+
+div.content {
+  width: 90%;
+  max-width: 1000px;
+  background: #fff;
+  padding: 40px;
+  margin: 20px auto;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+div.contacto-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+div.contacto-wrapper .contacto-info,
+div.contacto-wrapper .contact-formulario {
+  width: 50%;
+}
+div.contacto-info {
+  padding-left: 10px;
+}
+div.contacto-info .direccion {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+  font-size: 16px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+div.contacto-info .direccion .icono {
+  color: #fe4918;
+  margin-right: 10px;
+}
+div.contacto-info .direccion p {
+  color: #999;
+  font-family: 'Pt Sans',sans-serif;
+  -webkit-text-stroke: unset;
+}
+div.contacto-info .redes {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+div.contacto-info .redes a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  background: #fe4918;
+  color: #fff;
+  margin: 5px;
+  margin-bottom: 9px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 50%;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.4);
+}
+div.contacto-info .redes a:hover {
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.4);
+  background: #000;
+}
+@media only screen and (max-width: 480px) {
+    div.contacto-wrapper {
+      display: contents;
+    }
+    div.contacto-wrapper .contacto-info,
+    div.contacto-wrapper .contact-formulario {
+      width: 100%;
+    }
+    div.contacto-info .redes{
+      padding-top: 0;
+      padding-bottom: 10px;
+    }
+}
+/* -------------------------FORMULARIO------------------ */
+
+form.contact-formulario {
+  padding-left: 10px;
+}
+form.contact-formulario input[type='text'],
+form.contact-formulario textarea{
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  border: 1px solid #999;
+  color: #999;
+  font-family:'Open Sans',sans-serif;
+  font-weight: 400;
+  outline: 0;
+}
+form.contact-formulario textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 150px;
+  max-height: 200px;
+}
+form.contact-formulario input[type='text']:focus,
+form.contact-formulario textarea:focus {
+  border: 1px solid #fe4918;
+}
+form.contact-formulario button {
+  padding: 12px 30px;
+  color: #ff0000;
+  border: 2px solid #fe4918;
+  background: transparent;
+  cursor: pointer;
+  float: right;
+}
+form.contact-formulario button:hover {
+  color: #fff;
+  background: #fe4918;
+  border: 2px solid #fe4918;
+}
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
